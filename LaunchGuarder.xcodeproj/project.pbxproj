@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		485A9D652625974D00E40663 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D642625974D00E40663 /* AppDelegate.m */; };
-		485A9D682625974D00E40663 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D672625974D00E40663 /* SceneDelegate.m */; };
 		485A9D6B2625974D00E40663 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D6A2625974D00E40663 /* ViewController.m */; };
 		485A9D6E2625974D00E40663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485A9D6C2625974D00E40663 /* Main.storyboard */; };
 		485A9D702625974D00E40663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 485A9D6F2625974D00E40663 /* Assets.xcassets */; };
 		485A9D732625974D00E40663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 485A9D712625974D00E40663 /* LaunchScreen.storyboard */; };
 		485A9D762625974D00E40663 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D752625974D00E40663 /* main.m */; };
+		485A9D80262598DD00E40663 /* ComponentsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D7F262598DD00E40663 /* ComponentsLoader.m */; };
+		485A9D8426259CA100E40663 /* LaunchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D8326259CA100E40663 /* LaunchFilter.m */; };
+		485A9D8B26259DD800E40663 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D8A26259DD800E40663 /* Aspects.m */; };
+		485A9D942625B43700E40663 /* load.json in Resources */ = {isa = PBXBuildFile; fileRef = 485A9D932625B43700E40663 /* load.json */; };
+		485A9DA426293F7800E40663 /* LaunchGuarderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9DA326293F7800E40663 /* LaunchGuarderTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		485A9DA626293F7800E40663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 485A9D582625974D00E40663 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 485A9D5F2625974D00E40663;
+			remoteInfo = LaunchGuarder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		485A9D602625974D00E40663 /* LaunchGuarder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchGuarder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		485A9D632625974D00E40663 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		485A9D642625974D00E40663 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		485A9D662625974D00E40663 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		485A9D672625974D00E40663 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		485A9D692625974D00E40663 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		485A9D6A2625974D00E40663 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		485A9D6D2625974D00E40663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,10 +41,28 @@
 		485A9D722625974D00E40663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		485A9D742625974D00E40663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		485A9D752625974D00E40663 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		485A9D7E262598DD00E40663 /* ComponentsLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentsLoader.h; sourceTree = "<group>"; };
+		485A9D7F262598DD00E40663 /* ComponentsLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComponentsLoader.m; sourceTree = "<group>"; };
+		485A9D8226259CA100E40663 /* LaunchFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchFilter.h; sourceTree = "<group>"; };
+		485A9D8326259CA100E40663 /* LaunchFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchFilter.m; sourceTree = "<group>"; };
+		485A9D8926259DD800E40663 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		485A9D8A26259DD800E40663 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		485A9D932625B43700E40663 /* load.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = load.json; sourceTree = "<group>"; };
+		485A9D962626941300E40663 /* LaunchGuarder.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchGuarder.pch; sourceTree = "<group>"; };
+		485A9DA126293F7800E40663 /* LaunchGuarderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchGuarderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		485A9DA326293F7800E40663 /* LaunchGuarderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchGuarderTests.m; sourceTree = "<group>"; };
+		485A9DA526293F7800E40663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		485A9D5D2625974D00E40663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		485A9D9E26293F7800E40663 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				485A9D622625974D00E40663 /* LaunchGuarder */,
+				485A9DA226293F7800E40663 /* LaunchGuarderTests */,
 				485A9D612625974D00E40663 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				485A9D602625974D00E40663 /* LaunchGuarder.app */,
+				485A9DA126293F7800E40663 /* LaunchGuarderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,10 +93,9 @@
 		485A9D622625974D00E40663 /* LaunchGuarder */ = {
 			isa = PBXGroup;
 			children = (
+				485A9D8826259DD800E40663 /* Aspects */,
 				485A9D632625974D00E40663 /* AppDelegate.h */,
 				485A9D642625974D00E40663 /* AppDelegate.m */,
-				485A9D662625974D00E40663 /* SceneDelegate.h */,
-				485A9D672625974D00E40663 /* SceneDelegate.m */,
 				485A9D692625974D00E40663 /* ViewController.h */,
 				485A9D6A2625974D00E40663 /* ViewController.m */,
 				485A9D6C2625974D00E40663 /* Main.storyboard */,
@@ -72,8 +103,32 @@
 				485A9D712625974D00E40663 /* LaunchScreen.storyboard */,
 				485A9D742625974D00E40663 /* Info.plist */,
 				485A9D752625974D00E40663 /* main.m */,
+				485A9D7E262598DD00E40663 /* ComponentsLoader.h */,
+				485A9D7F262598DD00E40663 /* ComponentsLoader.m */,
+				485A9D8226259CA100E40663 /* LaunchFilter.h */,
+				485A9D8326259CA100E40663 /* LaunchFilter.m */,
+				485A9D932625B43700E40663 /* load.json */,
+				485A9D962626941300E40663 /* LaunchGuarder.pch */,
 			);
 			path = LaunchGuarder;
+			sourceTree = "<group>";
+		};
+		485A9D8826259DD800E40663 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				485A9D8926259DD800E40663 /* Aspects.h */,
+				485A9D8A26259DD800E40663 /* Aspects.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
+		485A9DA226293F7800E40663 /* LaunchGuarderTests */ = {
+			isa = PBXGroup;
+			children = (
+				485A9DA326293F7800E40663 /* LaunchGuarderTests.m */,
+				485A9DA526293F7800E40663 /* Info.plist */,
+			);
+			path = LaunchGuarderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +151,24 @@
 			productReference = 485A9D602625974D00E40663 /* LaunchGuarder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		485A9DA026293F7800E40663 /* LaunchGuarderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 485A9DA826293F7800E40663 /* Build configuration list for PBXNativeTarget "LaunchGuarderTests" */;
+			buildPhases = (
+				485A9D9D26293F7800E40663 /* Sources */,
+				485A9D9E26293F7800E40663 /* Frameworks */,
+				485A9D9F26293F7800E40663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				485A9DA726293F7800E40663 /* PBXTargetDependency */,
+			);
+			name = LaunchGuarderTests;
+			productName = LaunchGuarderTests;
+			productReference = 485A9DA126293F7800E40663 /* LaunchGuarderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -106,6 +179,10 @@
 				TargetAttributes = {
 					485A9D5F2625974D00E40663 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					485A9DA026293F7800E40663 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 485A9D5F2625974D00E40663;
 					};
 				};
 			};
@@ -123,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				485A9D5F2625974D00E40663 /* LaunchGuarder */,
+				485A9DA026293F7800E40663 /* LaunchGuarderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -133,8 +211,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				485A9D732625974D00E40663 /* LaunchScreen.storyboard in Resources */,
+				485A9D942625B43700E40663 /* load.json in Resources */,
 				485A9D702625974D00E40663 /* Assets.xcassets in Resources */,
 				485A9D6E2625974D00E40663 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		485A9D9F26293F7800E40663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,12 +233,30 @@
 			files = (
 				485A9D6B2625974D00E40663 /* ViewController.m in Sources */,
 				485A9D652625974D00E40663 /* AppDelegate.m in Sources */,
+				485A9D80262598DD00E40663 /* ComponentsLoader.m in Sources */,
 				485A9D762625974D00E40663 /* main.m in Sources */,
-				485A9D682625974D00E40663 /* SceneDelegate.m in Sources */,
+				485A9D8426259CA100E40663 /* LaunchFilter.m in Sources */,
+				485A9D8B26259DD800E40663 /* Aspects.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		485A9D9D26293F7800E40663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				485A9DA426293F7800E40663 /* LaunchGuarderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		485A9DA726293F7800E40663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 485A9D5F2625974D00E40663 /* LaunchGuarder */;
+			targetProxy = 485A9DA626293F7800E40663 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		485A9D6C2625974D00E40663 /* Main.storyboard */ = {
@@ -225,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -293,6 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NHYHE776Y8;
+				GCC_PREFIX_HEADER = LaunchGuarder/LaunchGuarder.pch;
 				INFOPLIST_FILE = LaunchGuarder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NHYHE776Y8;
+				GCC_PREFIX_HEADER = LaunchGuarder/LaunchGuarder.pch;
 				INFOPLIST_FILE = LaunchGuarder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -319,6 +425,46 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.imgo.LaunchGuarder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		485A9DA926293F7800E40663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHYHE776Y8;
+				INFOPLIST_FILE = LaunchGuarderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.imgo.LaunchGuarderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaunchGuarder.app/LaunchGuarder";
+			};
+			name = Debug;
+		};
+		485A9DAA26293F7800E40663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NHYHE776Y8;
+				INFOPLIST_FILE = LaunchGuarderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.imgo.LaunchGuarderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaunchGuarder.app/LaunchGuarder";
 			};
 			name = Release;
 		};
@@ -339,6 +485,15 @@
 			buildConfigurations = (
 				485A9D7A2625974D00E40663 /* Debug */,
 				485A9D7B2625974D00E40663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		485A9DA826293F7800E40663 /* Build configuration list for PBXNativeTarget "LaunchGuarderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				485A9DA926293F7800E40663 /* Debug */,
+				485A9DAA26293F7800E40663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

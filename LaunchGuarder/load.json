@@ -1,0 +1,29 @@
+[   {
+        "MethodID": "ComponentsLoader$methodA",
+        "init": -1
+    },
+    {
+        "MethodID": "ComponentsLoader$methodB",
+        "init": -1
+    },
+    {
+        "MethodID": "ComponentsLoader$methodC",
+        "init": -1
+    },
+    {
+        "MethodID": "ComponentsLoader$methodD",
+        "init": -1
+    },
+    {
+        "MethodID": "ComponentsLoader$methodE:",
+        "init": -1
+    },
+    {
+        "MethodID": "ComponentsLoader$methodF:withParam2:",
+        "init": -1
+    },
+    {
+        "MethodID": "ComponentsLoader$methodG:withParam2:withParam3:",
+        "init": -1
+    }
+]
