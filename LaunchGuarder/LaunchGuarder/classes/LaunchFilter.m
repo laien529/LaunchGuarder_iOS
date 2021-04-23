@@ -9,7 +9,7 @@
 #import "Aspects.h"
 
 
-#define CRASH_THRESHOLD  3
+#define CRASH_THRESHOLD  3 //连续崩溃次数阈值，正式启用时服务端下发
 
 @interface LaunchFilter () {
     
@@ -19,6 +19,22 @@
 
 @implementation LaunchFilter
 
++ (void)load {
+    [LaunchFilter installFilter];
+}
+
++ (instancetype)sharedFilter {
+    static dispatch_once_t onceToken;
+    static LaunchFilter *_filter;
+    dispatch_once(&onceToken, ^{
+        _filter = [[LaunchFilter alloc] init];
+    });
+    return _filter;
+}
+
+
+
+/// 读取静态配置文件.load.json，注入了待hook追踪的启动阶段调用的方法。后期根据二进制重排的mach-o文件来做相关策略
 + (NSArray*)readFilterList {
     if ([NSUserDefaults.standardUserDefaults objectForKey:UD_FILTER_LIST]) {
         
@@ -42,18 +58,6 @@
     return [NSUserDefaults.standardUserDefaults objectForKey:UD_FILTER_LIST];
 }
 
-+ (void)load {
-    [LaunchFilter installFilter];
-}
-
-+ (instancetype)sharedFilter {
-    static dispatch_once_t onceToken;
-    static LaunchFilter *_filter;
-    dispatch_once(&onceToken, ^{
-        _filter = [[LaunchFilter alloc] init];
-    });
-    return _filter;
-}
 
 + (void)installFilter {
     NSMutableArray *componentMethods = [NSMutableArray arrayWithArray:[LaunchFilter readFilterList]];

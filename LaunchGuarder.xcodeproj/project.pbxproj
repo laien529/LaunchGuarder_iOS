@@ -52,6 +52,7 @@
 		485A9DA126293F7800E40663 /* LaunchGuarderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchGuarderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		485A9DA326293F7800E40663 /* LaunchGuarderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchGuarderTests.m; sourceTree = "<group>"; };
 		485A9DA526293F7800E40663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08F8D1A2632620300C4BC55 /* LaunchGuarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchGuarder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +94,12 @@
 		485A9D622625974D00E40663 /* LaunchGuarder */ = {
 			isa = PBXGroup;
 			children = (
-				485A9D8826259DD800E40663 /* Aspects */,
+				B08F8D192632615900C4BC55 /* LaunchGuarder */,
 				485A9D632625974D00E40663 /* AppDelegate.h */,
 				485A9D642625974D00E40663 /* AppDelegate.m */,
 				485A9D692625974D00E40663 /* ViewController.h */,
 				485A9D6A2625974D00E40663 /* ViewController.m */,
+				485A9D962626941300E40663 /* LaunchGuarder.pch */,
 				485A9D6C2625974D00E40663 /* Main.storyboard */,
 				485A9D6F2625974D00E40663 /* Assets.xcassets */,
 				485A9D712625974D00E40663 /* LaunchScreen.storyboard */,
@@ -105,10 +107,7 @@
 				485A9D752625974D00E40663 /* main.m */,
 				485A9D7E262598DD00E40663 /* ComponentsLoader.h */,
 				485A9D7F262598DD00E40663 /* ComponentsLoader.m */,
-				485A9D8226259CA100E40663 /* LaunchFilter.h */,
-				485A9D8326259CA100E40663 /* LaunchFilter.m */,
 				485A9D932625B43700E40663 /* load.json */,
-				485A9D962626941300E40663 /* LaunchGuarder.pch */,
 			);
 			path = LaunchGuarder;
 			sourceTree = "<group>";
@@ -129,6 +128,25 @@
 				485A9DA526293F7800E40663 /* Info.plist */,
 			);
 			path = LaunchGuarderTests;
+			sourceTree = "<group>";
+		};
+		B08F8D18263260BD00C4BC55 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				485A9D8226259CA100E40663 /* LaunchFilter.h */,
+				485A9D8326259CA100E40663 /* LaunchFilter.m */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		B08F8D192632615900C4BC55 /* LaunchGuarder */ = {
+			isa = PBXGroup;
+			children = (
+				B08F8D18263260BD00C4BC55 /* classes */,
+				485A9D8826259DD800E40663 /* Aspects */,
+				B08F8D1A2632620300C4BC55 /* LaunchGuarder.h */,
+			);
+			path = LaunchGuarder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
