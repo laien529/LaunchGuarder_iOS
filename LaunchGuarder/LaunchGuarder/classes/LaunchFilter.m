@@ -60,13 +60,13 @@
 
 
 + (void)installFilter {
+    
     NSMutableArray *componentMethods = [NSMutableArray arrayWithArray:[LaunchFilter readFilterList]];
     
     for (NSDictionary *dict in componentMethods) {
         NSString *methodID = dict[@"MethodID"];
         NSString *cls = [methodID componentsSeparatedByString:@"$"].firstObject;
         NSString *methodName = [methodID componentsSeparatedByString:@"$"][1];
-//        NSMutableDictionary *appendIndexDict = [NSMutableDictionary dictionaryWithDictionary:dict];
         
         NSNumber *isInit = dict[@"init"];
        
@@ -93,7 +93,7 @@
 
                 [NSUserDefaults.standardUserDefaults synchronize];
                 [LaunchFilter replaceCrashMethodAction:NSSelectorFromString(methodName)  target:NSClassFromString(cls)];
-                NSString *predicateString =[ NSString stringWithFormat:@"%@$%@",cls, methodName];
+                NSString *predicateString = [NSString stringWithFormat:@"%@$%@",cls, methodName];
 
                 [LaunchFilter setupInitFinishStatus:predicateString];
             } else { //为满足阈值，继续添加hook跟踪
@@ -105,6 +105,8 @@
     }
 }
 
+/// 表示初始化开始，写入方法调用开始状态，后续没有写入完成则表明未完成方法执行，发生了异常/崩溃
+/// @param methodID 方法id，同load.json配置项字段
 + (void)setupInitStatus:(NSString*)methodID {
     NSArray *filterList = [LaunchFilter readFilterList];
    
@@ -121,13 +123,17 @@
     [LaunchFilter saveLoadRecord:componentMethods];
 }
 
+
+/// 表示初始化完成，写入完成标志位
+/// @param methodID 方法id，同load.json配置项字段
 + (void)setupInitFinishStatus:(NSString*)methodID {
     NSArray *filterList = [LaunchFilter readFilterList];
    
     NSPredicate *prd = [NSPredicate predicateWithFormat:@"MethodID==%@",methodID];
     NSDictionary *paramDict = [filterList filteredArrayUsingPredicate:prd].firstObject;
 
-    NSMutableDictionary *record = [NSMutableDictionary dictionaryWithDictionary:paramDict];    record[@"init"] = @(-1);
+    NSMutableDictionary *record = [NSMutableDictionary dictionaryWithDictionary:paramDict];
+    record[@"init"] = @(-1);
     NSMutableArray *componentMethods = [NSMutableArray arrayWithArray:[LaunchFilter readFilterList]] ;
     NSDictionary *dict = [componentMethods filteredArrayUsingPredicate:prd].firstObject;
     NSInteger index = [componentMethods indexOfObject:dict];
@@ -140,7 +146,7 @@
 
     [target aspect_hookSelector:methodName withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> params){
         NSLog(@"hook-beforeAction:%@----%@",target, NSStringFromSelector(methodName));
-        NSString *predicateString =[ NSString stringWithFormat:@"%@$%@",NSStringFromClass(target),NSStringFromSelector(methodName)];
+        NSString *predicateString = [NSString stringWithFormat:@"%@$%@",NSStringFromClass(target),NSStringFromSelector(methodName)];
         [self setupInitStatus:predicateString];
 
     } error:&error];
@@ -148,16 +154,19 @@
     if (!error) {
         [target aspect_hookSelector:methodName withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> params){
             NSLog(@"hook-afterAction:%@----%@",target, NSStringFromSelector(methodName));
-            NSString *predicateString =[ NSString stringWithFormat:@"%@$%@",NSStringFromClass(target),NSStringFromSelector(methodName)];
+            NSString *predicateString = [NSString stringWithFormat:@"%@$%@",NSStringFromClass(target),NSStringFromSelector(methodName)];
             [LaunchFilter setupInitFinishStatus:predicateString];
         } error:&error];
     }
 }
 
+
+/// HOOK触发替换崩溃方法原实现，可以做降级，恢复等处理.
 + (void)replaceCrashMethodAction:(SEL)methodName target:(Class)target {
     
     NSError *error;
     [target aspect_hookSelector:methodName withOptions:AspectPositionInstead usingBlock:^(id<AspectInfo> params){
+        //Do anything you want after recover from App launch crash. or ignore the method which crash happened.
         NSLog(@"replace-Action:%@----%@",target, NSStringFromSelector(methodName));
     } error:&error];
 }

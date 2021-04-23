@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LaunchGuarderManager : NSObject
 
++ (instancetype)sharedManager;
+- (void)setTrackEnable:(BOOL)isEnable;
 @end
 
 NS_ASSUME_NONNULL_END

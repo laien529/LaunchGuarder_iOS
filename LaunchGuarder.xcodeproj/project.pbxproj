@@ -18,6 +18,7 @@
 		485A9D8B26259DD800E40663 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9D8A26259DD800E40663 /* Aspects.m */; };
 		485A9D942625B43700E40663 /* load.json in Resources */ = {isa = PBXBuildFile; fileRef = 485A9D932625B43700E40663 /* load.json */; };
 		485A9DA426293F7800E40663 /* LaunchGuarderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 485A9DA326293F7800E40663 /* LaunchGuarderTests.m */; };
+		B08F8D1F2632637500C4BC55 /* LaunchGuarderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B08F8D1E2632637500C4BC55 /* LaunchGuarderManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		485A9DA326293F7800E40663 /* LaunchGuarderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchGuarderTests.m; sourceTree = "<group>"; };
 		485A9DA526293F7800E40663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08F8D1A2632620300C4BC55 /* LaunchGuarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchGuarder.h; sourceTree = "<group>"; };
+		B08F8D1D2632637500C4BC55 /* LaunchGuarderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchGuarderManager.h; sourceTree = "<group>"; };
+		B08F8D1E2632637500C4BC55 /* LaunchGuarderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchGuarderManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				B08F8D18263260BD00C4BC55 /* classes */,
 				485A9D8826259DD800E40663 /* Aspects */,
 				B08F8D1A2632620300C4BC55 /* LaunchGuarder.h */,
+				B08F8D1D2632637500C4BC55 /* LaunchGuarderManager.h */,
+				B08F8D1E2632637500C4BC55 /* LaunchGuarderManager.m */,
 			);
 			path = LaunchGuarder;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				485A9D6B2625974D00E40663 /* ViewController.m in Sources */,
 				485A9D652625974D00E40663 /* AppDelegate.m in Sources */,
 				485A9D80262598DD00E40663 /* ComponentsLoader.m in Sources */,
+				B08F8D1F2632637500C4BC55 /* LaunchGuarderManager.m in Sources */,
 				485A9D762625974D00E40663 /* main.m in Sources */,
 				485A9D8426259CA100E40663 /* LaunchFilter.m in Sources */,
 				485A9D8B26259DD800E40663 /* Aspects.m in Sources */,
